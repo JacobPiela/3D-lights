@@ -1,0 +1,28 @@
+{
+  "name": "3d-lights",
+  "numberOfLEDS": 150,
+  "ssl": false,
+  "version": "1.0.0",
+  "description": "3D neopixels",
+  "main": "index.js",
+  "scripts": {
+    "start": "sudo node index.js",
+    "setUpSSL": "openssl req -x509 -newkey rsa:4096 -keyout ./ssl/key.pem -out ./ssl/cert.pem -sha256 -nodes -days 10000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jacob piela",
+  "license": "MIT",
+  "keywords": [
+    "3D-lights",
+    "neoPixels",
+    "IRGB",
+    "Christmas"
+  ],
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-persist": "^3.1.0",
+    "open-simplex-noise": "^2.5.0",
+    "rpi-ws281x": "^1.0.36"
+  }
+}

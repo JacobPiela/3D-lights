@@ -1,0 +1,11 @@
+{
+    "niceName":"3D-Lights",
+    "numberOfLEDS":49,
+    "ssl":false,
+    "gpio":18,
+    "LEDstripType":"rgb",
+    "port":80,
+    "sslPort":443,
+    "dma":10
+  }
+  

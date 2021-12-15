@@ -1,12 +1,12 @@
 {
-  "name": "jacob-piela-colorshift",
-  "niceName":"Color Shift",
-  "args":{"Speed":{"type":"Slider","min":1,"max":60,"default":60},"Brightness":{"type":"Slider","min":1,"max":255,"default":128}},
+  "name": "jacob-piela-basic",
+  "niceName":"Basic Tree",
+  "args":{"Brightness":{"type":"Slider","min":1,"max":255,"default":128}},
   "minRunTime":30,
-  "inRandom":true,
+  "inRandom":false,
   "needs3D":false,
   "version": "1.0.0",
-  "description": "Color shifting with open simplex noise",
+  "description": "plain static lights",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

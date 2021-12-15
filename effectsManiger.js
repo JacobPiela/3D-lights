@@ -68,7 +68,7 @@ exports.effectsManiger = function(config){
                 this.setEffect("error")
             }
         } else {
-            console.error("ERROR: " + name + "is not an effect")
+            console.error("ERROR: " + name + " is not an effect")
             this.effect = "error"
         }
     }

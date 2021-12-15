@@ -24,7 +24,7 @@ const effectsManiger = require("./effectsManiger")
 const EM = new effectsManiger.effectsManiger(config)
 
 
-EM.setEffect("rainbow")
+EM.setEffect("jacob-piela-rainbow")
 
 
 const api = require('./api.v1')
@@ -39,8 +39,9 @@ let httpServer = http.createServer(app)
 httpServer.listen(settings.port)
 
 if(settings.ssl){
-    let privateKey  = fs.readFileSync(__dirname + '/ssl/key.pem' , 'utf8')
-    let certificate = fs.readFileSync(__dirname + '/ssl/cert.pem', 'utf8')
-    let httpsServer = https.createServer({key: privateKey, cert: certificate}, app)
+    let httpsServer = https.createServer({
+        key: fs.readFileSync(__dirname + '/ssl/key.pem' , 'utf8'),
+        cert: fs.readFileSync(__dirname + '/ssl/cert.pem', 'utf8')
+    }, app)
     httpsServer.listen(settings.sslPort)
 }

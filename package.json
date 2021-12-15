@@ -1,7 +1,7 @@
 {
   "name": "3d-lights",
   "numberOfLEDS": 150,
-  "ssl": false,
+  "ssl": true,
   "version": "1.0.0",
   "description": "3D neopixels",
   "main": "index.js",

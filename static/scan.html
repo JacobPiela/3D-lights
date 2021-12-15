@@ -1,22 +1,99 @@
-<html>
-  <head>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
+<!doctype html height:100%;overflow:hidden;>
 
-      canvas {
-        display: block;
-        margin: 30px auto;
-        padding: 0px 0;
-      }
-    </style>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-<script src="/main.js"></script>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>3D Lights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3D neopixels">
+    <meta name="author" content="Jacob Piela">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+            margin: 30px auto;
+            padding: 0px 0;
+        }
+        .controls {
+            width:50%;
+            margin: auto;
+        }
+        .indexbtn{
+            
+            flex: 1 0 auto;
+            margin:5px
+        }
+        .indexbtnd{
+            display: flex;
+        }
+        @media screen and (max-width: 480px) {
+            .controls {
+                width:90%;
+            }
+        }
+
+        </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="/scan.js"></script>
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="main.css">
+
 </head>
+
 <body>
-  <main>
-  </main>
-</body>
+    <main>
+    </main>
+    
+    <div class="controls">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <br/>
+        <div class="form-group form-inline">
+
+        <label class=".sr-only">Starting LED index</label>
+        <input class="form-control mb-2 mr-sm-2" type="number" id="" name="">
+
+        <label class=".sr-only">Ending LED index</label>
+        <input class="form-control mb-2 mr-sm-2" type="number" id="" name="">
+        </div>
+        <div class="form-group">
+            <label for="">Facing direction</label><br/>
+            <select class="form-control" name="dir" id="cars">
+                <option value="front">Front</option>
+                <option value="back">Back</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+            </select>
+        </div>
+        <br/>
+        <input type="number" class="form-control" id="" placeholder="Index">
+        <div class="form-group indexbtnd">
+            <button class='btn btn-success indexbtn' type='button' onclick=''>Scan Index</button>
+            <button class='btn btn-success indexbtn' type='button' onclick=''>Manualy Set</button>
+            <button class='btn btn-success indexbtn' type='button' onclick=''>Find Index</button>
+        </div>
+        <br/>
+        <div class="form-group">
+            <button class='btn btn-success form-control' type='button' onclick='getled100()'>Scan All</button><br/><br/>
+            <button class='btn btn-success form-control' type='button' onclick=''>Test</button><br/><br/>
+            <button class='btn btn-success form-control' type='button' onclick=''>Download Coords</button><br/><br/>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    </body>
 </html>

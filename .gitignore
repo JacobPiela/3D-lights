@@ -1,0 +1,5 @@
+# Ignore ssl keys
+ssl/**
+
+# Ignore node modules
+node_modules

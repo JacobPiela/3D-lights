@@ -17,11 +17,7 @@ exports.setup = function(config1,args){
 
 exports.draw = function(pixels,args,daltaTime){
     if(args.colors != undefined){
-        try {
-        colors = JSON.parse(args.colors)
-        } catch(err){
-            console.error("basic was unable to load now colors from args")
-        }
+        colors = args.colors
     }
 
     for (var i = 0; i < config.leds; i++){
